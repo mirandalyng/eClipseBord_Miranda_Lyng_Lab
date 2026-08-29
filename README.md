@@ -8,6 +8,7 @@
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
 
 ## About
 
@@ -26,6 +27,8 @@ _Picture from Kokchun Giang_
 - **Frontend** (Streamlit)
 
 The frontend sends requests to the backend and gets data back
+
+The Azure infrastructure (Container Registry, App Service, Container App) is provisioned using Terraform (azurerm provider).
 
 To deploy, you push both Docker images to Azure Container Registry, which acts as a storage hub for your container images in the cloud.
 
