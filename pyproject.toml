@@ -11,3 +11,8 @@ members = [
     "backend",
     "frontend",
 ]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+]
