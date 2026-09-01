@@ -17,3 +17,6 @@ async def show_data(data: str):
     df = DATASETS.get(data)
     # had to set the limit lower for the data to be able to load on my computer
     return df.head(20).to_dict(orient="records")
+
+
+# maybe add a endpoint for month or year? if time is there.
