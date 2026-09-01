@@ -44,3 +44,11 @@ The dataset used contains data related to the August 12th 2026 solar eclipse. So
 ## EDA
 
 A short exploratory data analysis was done in [`eda.ipynb`](eda.ipynb) using **Jupyter** and **Pandas**, to get a basic understanding of the dataset before building the dashboard. The focus of this project is cloud infrastructure, so the EDA is intentionally kept brief.
+
+## Documentation
+
+[Streamlit Documentation](https://docs.streamlit.io/)
+
+[Terraform Documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+
+[FastAPI Documentation](https://fastapi.tiangolo.com/)

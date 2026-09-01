@@ -22,24 +22,38 @@ def show_dataset(df):
 def lunar_data(df):
     st.markdown("### Lunar Eclipse Insights")
 
-    col1, col2 = st.columns(2)
+    df["Eclipse Type Simple"] = df["Eclipse Type"].str[0].map({
+        "N": "Penumbral",
+        "P": "Partial",
+        "T": "Total",
+    })
 
-    with col1:
-        st.markdown("hej")
+    st.bar_chart(df["Eclipse Type Simple"].value_counts(), color="#3F185B")
 
-    with col2:
-        st.markdown("hejhej")
+    df["Hours"] = pd.to_datetime(df["Eclipse Time"], format="%H:%M:%S").dt.hour
+    hour_eclipse = df["Hours"].value_counts().sort_index()
+
+    st.markdown("### Eclipses Hourly")
+    st.bar_chart(hour_eclipse, color="#3F185B")
 
 
 def solar_data(df):
     st.markdown("### Solar Eclipse Insights")
 
-    col1, col2 = st.columns(2)
+    df["Eclipse Type Simple"] = df["Eclipse Type"].str[0].map({
+        "A": "Annular",
+        "H": "Hybrid",
+        "P": "Partial",
+        "T": "Total",
+    })
 
-    with col1:
-        st.markdown("hej")
-    with col2:
-        st.markdown("hejhej")
+    st.bar_chart(df["Eclipse Type Simple"].value_counts(), color="#E26F12")
+
+    df["Hours"] = pd.to_datetime(df["Eclipse Time"], format="%H:%M:%S").dt.hour
+    hour_eclipse = df["Hours"].value_counts().sort_index()
+
+    st.markdown("### Eclipses Hourly")
+    st.bar_chart(hour_eclipse, color="#E26F12")
 
 
 def main():
