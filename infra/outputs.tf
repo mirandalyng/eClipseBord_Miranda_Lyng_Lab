@@ -1,4 +1,4 @@
-output "acr_login_service" {
+output "acr_login_server" {
   value = azurerm_container_registry.acr.login_server
 }
 output "acr_name" {
