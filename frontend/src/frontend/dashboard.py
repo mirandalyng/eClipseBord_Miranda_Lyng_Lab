@@ -19,6 +19,29 @@ def show_dataset(df):
     st.dataframe(df)
 
 
+def lunar_data(df):
+    st.markdown("### Lunar Eclipse Insights")
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.markdown("hej")
+
+    with col2:
+        st.markdown("hejhej")
+
+
+def solar_data(df):
+    st.markdown("### Solar Eclipse Insights")
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.markdown("hej")
+    with col2:
+        st.markdown("hejhej")
+
+
 def main():
     st.markdown("# About Eclipses")
 
@@ -37,6 +60,11 @@ def main():
     df = get_data(DATASET)
 
     show_dataset(df)
+
+    if DATASET == "solar":
+        solar_data(df)
+    if DATASET == "lunar":
+        lunar_data(df)
 
 
 if __name__ == "__main__":
