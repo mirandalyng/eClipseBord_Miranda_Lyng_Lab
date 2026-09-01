@@ -16,7 +16,7 @@ resource "azurerm_linux_web_app" "webapp" {
   site_config {
     application_stack {
       docker_image_name   = "frontend:${var.image_tag}"
-      docker_registry_url = "httpx://${azurerm_container_registry.acr.login_server}"
+      docker_registry_url = "https://${azurerm_container_registry.acr.login_server}"
 
     }
     #password less configuration

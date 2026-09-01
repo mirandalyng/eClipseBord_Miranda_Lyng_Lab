@@ -11,11 +11,11 @@ variable "location" {
 }
 
 variable "project_name" {
-  default = "lab_azure"
+  default = "lab-azure"
 }
 
 variable "acr_name" {
-  default = "lab_ml"
+  default = "labml"
 
 }
 

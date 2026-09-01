@@ -1,5 +1,5 @@
-resource "container_app_environment" "env" {
-  name                = "${var.project_name}--cae"
+resource "azurerm_container_app_environment" "env" {
+  name                = "${var.project_name}-cae"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
 
@@ -7,9 +7,9 @@ resource "container_app_environment" "env" {
 }
 
 resource "azurerm_container_app" "api" {
-  name                         = "${var.project_name}--api"
+  name                         = "${var.project_name}-api"
   resource_group_name          = azurerm_resource_group.rg.name
-  container_app_environment_id = azurem_container_app_enviroment.env
+  container_app_environment_id = azurerm_container_app_environment.env.id
   revision_mode                = "Single"
 
   template {
