@@ -17,7 +17,8 @@ WORKDIR /app
 RUN uv sync --no-dev
 
 # change working directory to where we have api.py 
-WORKDIR /app/src/backend
+WORKDIR /app/src/frontend
 
 # 0.0.0.0 -> accept connections from local machine and external 
-CMD [ "uv" , "run", "streamlit", "run", "dashboard.py", "--server.address", "0.0.0.0"]
+CMD ["uv" , "run", "streamlit", "run", "dashboard.py", "--server.address", "0.0.0.0"]
+
