@@ -1,11 +1,12 @@
 import streamlit as st
 import httpx
-from backend.data_processing import solar_df, lunar_df
 import pandas as pd
 from pathlib import Path
+import os
 
-BASE_URL = "http://127.0.0.1:8000"
-IMAGES_DIR = Path(__file__).parents[3] / "images"
+BASE_URL = os.getenv("BACKEND_URL", "http://127.0.0.1:8000")
+IMAGES_DIR = Path(
+    os.getenv("IMAGES_DIR", Path(__file__).parents[3] / "images"))
 
 
 def get_data(DATASET):
