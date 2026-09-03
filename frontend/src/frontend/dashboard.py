@@ -11,7 +11,7 @@ IMAGES_DIR = Path(
 
 
 def get_data(DATASET):
-    response = httpx.get(f"{BASE_URL}/eclipse/{DATASET}")
+    response = httpx.get(f"{BASE_URL}/eclipse/{DATASET}", timeout=10)
     data = response.json()
     return pd.DataFrame(data)
 
