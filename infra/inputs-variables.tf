@@ -6,7 +6,12 @@ variable "resource-group-name" {
 
 variable "location" {
   type    = string
-  default = "norwayeast"
+  default = "germanywestcentral"
+
+}
+variable "app_location" {
+  type    = string
+  default = "denmarkeast"
 
 }
 

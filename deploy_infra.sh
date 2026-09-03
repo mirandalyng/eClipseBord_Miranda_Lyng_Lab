@@ -14,7 +14,7 @@ terraform init -input=false -lock=false
 echo "2. deploy infrastructure"
 terraform apply -auto-approve -var=image_tag="$IMAGE_TAG" -lock=false
 
-ACR_LOGIN_SERVER="$(terraform output -raw acr_login_server"
+ACR_SERVER_LOGIN="$(terraform output -raw acr_login_server)"
 ACR_NAME="$(terraform output -raw acr_name)"
 
 echo "3. login to acr" 
